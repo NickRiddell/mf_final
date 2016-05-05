@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+                Imperdiet vulputate quam orci euismod magnis consectetur in a eu a parturient est arcu lorem vulputate leo accumsan a tellus eu congue vestibulum a. Ullamcorper dui a parturient maecenas posuere justo nullam a donec interdum dignissim a scelerisque lectus hendrerit dis himenaeos suspendisse euismod consectetur ultricies. Sapien ipsum suscipit posuere parturient ad lacinia a faucibus odio suspendisse congue mus orci tempus vulputate a a duis enim scelerisque torquent aliquet cras leo elit.
+        </div>
+
+        <div class="col-md-3">
+            <form class="form form-horizontal" name="addDetails">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="firstNameInput">First Name * </label>
+
+                            <div class="controls">
+                                <input class="input-large" id="firstNameInput" name="firstNameInput" type="text" required>
+
+                                    <div ng-show="addDetails.firstNameInput.$error.required && firstNameInput.$dirty">
+                                        <p><i class="icon icon-warning-sign"></i>Please enter a first name</p>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="firstNameInput">Last Name * </label>
+
+                            <div class="controls">
+                                <input class="input-large" id="lastNameInput" name="lastNameInput" type="text" required>
+
+                                    <div ng-show="addDetails.lastNameInput.$dirty">
+                                        <p><i class="icon icon-warning-sign"></i>Please enter a last name</p>
+                                    </div>
+                            </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="contactPhone">Contact Phone </label>
+                            <div class="controls">
+                                <input class="input-large" id="contactPhone" name="contactPhone" type="tel">
+                            </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="contactEmail">Contact Email* </label>
+                            <div class="controls">
+                                <input class="input-large" id="contactEmail" name="contactEmail" type="email" required>
+                            </div>
+
+                            <div ng-show="addDetails.contactEmail.$dirty">
+                                <p><i class="icon icon-warning-sign"></i>Please enter a valid email</p>
+                            </div>
+
+                        <p class="required-fields">(*required fields)</p>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <button name="saveBtn" ng-click="addNewEvent()" ng-disabled="addEvent.$invalid" class="btn btn-large btn-primary" >Save</button>
+                            <a href="#/" name="cancelBtn" class="btn btn-large btn-danger">Cancel</a>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

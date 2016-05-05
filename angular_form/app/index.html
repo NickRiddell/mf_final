@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My McFL Test</title>
+  <meta name="description" content="McFL Test">
+  <link rel="stylesheet" href="styles/bootstrap-2.3.2.css">
+  <style type="text/css">
+      body {
+          padding-top: 60px;
+          padding-bottom: 40px;
+      }
+  </style>
+  <link rel="stylesheet" href="styles/bootstrap-responsive-2.3.2.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">McEFL</a>
+<!--         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">f</button>
+        <div class="collapse nav-collapse navHeaderCollapse"> -->
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/view1">view1</a></li>
+                <li><a href="#/view2">view2</a></li>
+          </ul>
+<!--         </div>
+ -->      </div>
+  </div>
+  <div ng-view></div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
